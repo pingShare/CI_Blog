@@ -45,8 +45,8 @@
 	<div id="OSC_Content"><div class="SpaceChannel">
 	<div id="portrait"><a href="adminIndex.htm"><img src="assets/images/portrait.gif" alt="Johnny" title="Johnny" class="SmallPortrait" user="154693" align="absmiddle"></a></div>
     <div id="lnks">
-		<strong>Johnny的博客</strong>
-		<div>
+		<strong><?php echo $user->USER_NAME?>的博客</strong>
+		<div>  <!-- $user是用户他的用户信息 -->
 			<a href="#">TA的博客列表</a>&nbsp;|
 			<a href="sendMsg.htm">发送留言</a>
 </span>

@@ -7,6 +7,7 @@ class Blog extends CI_Controller{
         $this->load->model('blog_model');
         $this->load->model('catalog_model');
         $this->load->model('comt_model');
+        $this->load->model('user_model');   
     }
     public function index(){
         $userid = $this->session->userdata('bid');
@@ -40,7 +41,7 @@ class Blog extends CI_Controller{
         $issue_id=$this->uri->segment(3);
         $issueinfo=$this->blog_model->get_detail($issue_id);
         $cmt=$this->comt_model->issue_cmt($issue_id);
-       // var_dump($issueinfo);die();
+      // var_dump($issueinfo);die();
        $data['cmt']=$cmt;
         $data['issue']=$issueinfo;
         $this->load->view('viewPost_logined.php',$data);
@@ -122,6 +123,8 @@ class Blog extends CI_Controller{
         $userid = $this->uri->segment(3);
         $myblogs=$this->blog_model->get_myblog($userid);
         $comts=$this->comt_model->get_comt();
+        $user=$this->user_model->getNamebyId($userid);
+        $data['user']=$user;
         $data['com']=$comts;
         $data['all']=$myblogs;
         $re=$this->catalog_model->select_cata($userid);

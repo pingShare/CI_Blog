@@ -3,7 +3,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="Content-Language" content="zh-CN">
   <title>测试文章2 -  Johnny的博客 - SYSIT个人博客</title>
-    <base href="<?php echo site_url()?>">
+		<base href="<?php echo site_url()?>">
+		<!-- 文章详情页 -->
     <link rel="stylesheet" href="assets/css/space2011.css" type="text/css" media="screen">
   <link rel="stylesheet" type="text/css" href="assets/css/jquery.css" media="screen">
   <script type="text/javascript" src="assets/js/jquery-1.js"></script>
@@ -44,10 +45,10 @@
 	<div id="OSC_Content"><div class="SpaceChannel">
 	<div id="portrait"><a href="adminIndex.htm"><img src="assets/images/portrait.gif" alt="Johnny" title="Johnny" class="SmallPortrait" user="154693" align="absmiddle"></a></div>
     <div id="lnks">
-		<strong>Johnny的博客</strong>
+		<strong><?php echo $issue->USER_NAME?>的博客</strong>
 		<div>
 			<a href="blog/his_index/<?php echo $issue->WRITER?>">TA的博客列表</a>&nbsp;|
-			<a href="sendMsg.htm">发送留言</a>
+			<a href="message/sendMsg/<?php echo $issue->WRITER?>">发送留言</a>
 </span>
 		</div>
 	</div>

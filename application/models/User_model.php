@@ -22,6 +22,14 @@
             $query=$this->db->insert('t_users', $arr);
             return $query;
         }
+        public function getNamebyId($userid){
+            $arr=array(
+				'USER_ID'=>$userid,
+			);
+			
+			$query=$this->db->get_where('t_users',$arr);
+			return $query->row();
+        }
 	}
 
 ?>

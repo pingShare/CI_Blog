@@ -3,9 +3,8 @@
         public function get_detail($issue_id){
            /*  $this->db->where("t_blogs.BLOG_ID='$issue_id' and t_blogs.CATALOG_ID=t_blog_catalogs.CATALOG_ID
                     and t_blogs.BLOG_ID=t_comments.BLOG_ID"); */
-                    $this->db->where("t_blogs.BLOG_ID='$issue_id' and t_blogs.CATALOG_ID=t_blog_catalogs.CATALOG_ID");
-                    
-            $issueinfo=$this->db->get("t_blogs,t_blog_catalogs");
+                    $this->db->where("t_blogs.BLOG_ID='$issue_id' and t_blogs.CATALOG_ID=t_blog_catalogs.CATALOG_ID and t_blogs.WRITER=t_users.USER_ID");            
+            $issueinfo=$this->db->get("t_blogs,t_blog_catalogs,t_users");
             return $issueinfo->row();
         }
         public function get_all(){       //查到所有数据库所有文章
@@ -16,10 +15,12 @@
         }
         public function get_myblog($userid){
             $this->db->order_by('BLOG_ID', 'DESC');
-//            if ($_SESSION['bid']){
-              
+//            if ($_SESSION['bid']){       
 // 查分类           $where="t_blogs.CATALOG_ID=t_blog_catalogs.CATALOG_ID and t_users.USER_ID=t_blogs.WRITER and t_blog_catalogs.USER_ID='$sess_id'";
+             
                 $where="t_blogs.CATALOG_ID=t_blog_catalogs.CATALOG_ID and t_users.USER_ID=t_blogs.WRITER and t_blogs.WRITER='$userid'";  //查该userid的文章
+
+                
 //            }else{
 //                $where="t_blogs.CATALOG_ID=t_blog_catalogs.CATALOG_ID and t_users.USER_ID=t_blogs.WRITER";  //查所有人的文章
 //            }

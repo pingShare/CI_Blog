@@ -141,6 +141,7 @@
 	<div id="Content"><div id="s_error_msg" class="error_msg"></div>
 <div id="s_success_msg" class="success_msg"></div>
 <form id="frm_sendmsg" action="message/do_send" method="POST">
+<input type="hidden" value="<?php echo $writer?>" name='writerId'>
 <table>
 <tbody><tr><td class="heading">留言内容(最多250个字): </td></tr>
 <tr><td><textarea id="ta_msg_content" name="content" style="width: 400px; height: 120px; padding: 2px; overflow: hidden;"></textarea></td></tr>

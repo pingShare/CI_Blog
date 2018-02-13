@@ -8,6 +8,8 @@ session全局配完还要单个controller里配
 //显示分类   foreach
 
 注意数据库的级联
+message.php下do_send 完成后不跳转
+新留言？记录上次登陆时间？
 
 
 图片码、文章显示省略号

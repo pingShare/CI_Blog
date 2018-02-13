@@ -81,24 +81,28 @@
     </ul>
 <div class="MsgList">
 <ul>
+	<?php foreach($msg as $value){?>
     <li id="msg_186720">
 	<span class="sender"><a href="#"><img src="assets/images/12_50.jpg" alt="红薯" title="红薯" class="SmallPortrait" user="12" align="absmiddle"></a></span>
 	<span class="msg">
+		
 		<div class="outline">
-			<a href="#" target="user">红薯</a>
-			发送于 昨天(23:00) (2011-06-17 23:00)				
+			<a href="#" target="user"><?php echo $value->USER_NAME?></a>
+			发送于 <?php echo $value->ADD_TIME?>				
 			&nbsp;&nbsp;<a href="javascript:delete_in_msg(186720)">删除</a>
 		</div>
 		<div class="content">
-		  <div class="c">您好，欢迎使用SYSIT Blog。</div></div>
+		  <div class="c"><?php echo $value->CONTENT?></div></div>
 		<div class="opts">
 			<a href="javascript:sendmsg(12,186720)">回复留言</a>
 					</div>
 	</span>
 	<div class="clear"></div>
-  </li>
+	</li>
+	<?php } ?>
   </ul>
 </div>
+
 <!--
 <script type="text/javascript">
 <!--

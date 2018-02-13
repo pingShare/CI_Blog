@@ -4,6 +4,7 @@
   <meta http-equiv="Content-Language" content="zh-CN">
   <title>Johnny的博客 - SYSIT个人博客</title>
     <base href="<?php echo site_url() ?>">
+    <!-- 未登录时的首页 -->
       <link rel="stylesheet" href="assets/css/space2011.css" type="text/css" media="screen">
   <link rel="stylesheet" type="text/css" href="assets/css/jquery.css" media="screen">
   <script type="text/javascript" src="assets/js/jquery-1.js"></script>
