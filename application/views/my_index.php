@@ -100,7 +100,7 @@
 	  <span class="stat">统计: <?php echo $value->COMM_RATE?>评/<?php echo $value->CLICK_RATE?>阅</span>
 	  	  <span class="blog_admin">( <a href="blog/edit_blog/<?php echo $value->BLOG_ID ?>">修改</a> | <a href="blog/delete/<?php echo $value->BLOG_ID ?>">删除</a> )</span>
 	  	</div>
-		<div class="TextContent" id="blog_content_24027">
+		<div class="TextContent" id="blog_content_24027"   style="width:600px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
             <?php echo $value->CONTENT ?>
 		<div class="fullcontent"><a href="viewPost_comment.htm">阅读全文...</a></div>
 			</div>

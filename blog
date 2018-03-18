@@ -6,12 +6,25 @@ session全局配完还要单个controller里配
 //index get_all获取不到值
  //发表文章  分类，怎么获取到类别值，提示外键关联错误
 //显示分类   foreach
+//留言、搜索(另一个页面，like关键字、where user_id = 当前博客作者id )
+文章显示省略号 {
+    width:600px;
+    overflow:hidden;
+    white-space:nowrap;  规定段落中的文本不进行换行：
+    text-overflow:ellipsis;
+}
 
 注意数据库的级联
 message.php下do_send 完成后不跳转
-新留言？记录上次登陆时间？
 
 
-图片码、文章显示省略号
-留言、搜索
-业务逻辑跳转   ajax
+注意数据库的级联
+!!!图片码、 ajax
+新留言？记录上次登陆时间？{
+    另建一个表记录用户的登陆时间，用语句检索到该用户最新的一条记录，
+             留言在该时间范围内的为新留言 （？上次登陆期间的留言只能等到下次登陆上再看）
+
+}
+
+
+   

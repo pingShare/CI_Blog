@@ -25,10 +25,17 @@
         public function getNamebyId($userid){
             $arr=array(
 				'USER_ID'=>$userid,
-			);
-			
+			);		
 			$query=$this->db->get_where('t_users',$arr);
 			return $query->row();
+        }
+
+
+        //vue用的登录注册
+        public function checkUser(name,pwd){
+            $select = "select * from t_users where USER_NAME='name' and PASSWORD='pwd'";
+            $query=$this->db->query($select);
+            return $query;
         }
 	}
 
