@@ -76,7 +76,7 @@ header('Access-Control-Allow-Headers:x-requested-with,content-type');
             set_cookie("pwd",$pass); */
             if($query){
                 echo "<script>alert("登录成功")</script>"
-            }
+            }//没有用
         }
 
     }
